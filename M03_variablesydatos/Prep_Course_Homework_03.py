@@ -7,6 +7,8 @@
 
 # In[7]:
 
+numero = 10 
+print ( numero)
 
 
 
@@ -14,6 +16,7 @@
 
 # In[3]:
 
+print(type(8.5))
 
 
 
@@ -22,7 +25,7 @@
 
 # In[8]:
 
-
+print(typt(numero))
 
 
 
@@ -30,13 +33,14 @@
 
 # In[2]:
 
-
+nombre = "Kobac_vj_fai"
 
 
 # 5) Crear una variable que contenga un número complejo
 
 # In[3]:
 
+numero_complejo = 4 + 5j
 
 
 
@@ -46,22 +50,29 @@
 # In[4]:
 
 
-
+print(type(numero_complejo))
 
 
 # 7) Crear una variable que contenga el valor del número Pi redondeado a 4 decimales
 
 # In[1]:
+import math
+pi = round(math.pi, 4)
+print(pi)
 
-
-pi = 3.1416
 
 
 # 8) Crear una variable que contenga el valor 'True' y otra que contenga el valor True. ¿Se trata de lo mismo?
 
 # In[3]:
 
+texto = 'True'
+booleano = True
 
+print(texto)
+print(booleano)
+print(type(texto))
+print(type(booleano))
 
 
 
@@ -69,7 +80,8 @@ pi = 3.1416
 
 # In[5]:
 
-
+print(type(texto))
+print(type(booleano))
 
 
 
@@ -77,14 +89,16 @@ pi = 3.1416
 
 # In[1]:
 
-
+resultado = 5 + 3.2
+print(resultado)
 
 
 
 # 11) Realizar una operación de suma de números complejos
 
 # In[2]:
-
+resultado = (2 + 3j) + (4 + 5j)
+print(resultado)
 
 
 
@@ -92,7 +106,8 @@ pi = 3.1416
 # 12) Realizar una operación de suma de un número real y otro complejo
 
 # In[4]:
-
+resultado = 5 + (2 + 3j)
+print(resultado)
 
 
 
@@ -100,6 +115,9 @@ pi = 3.1416
 # 13) Realizar una operación de multiplicación
 
 # In[5]:
+
+resultado = 4 * 3
+print(resultado)
 
 
 
@@ -109,14 +127,16 @@ pi = 3.1416
 
 # In[6]:
 
-
+resultado = 2 ** 8
+print(resultado)
 
 
 # 15) Obtener el cociente de la división de 27 entre 4 en una variable y luego mostrarla
 
 # In[8]:
 
-
+cociente = 27 / 4
+print(cociente)
 
 
 
@@ -124,7 +144,8 @@ pi = 3.1416
 
 # In[9]:
 
-
+parte_entera = 27 // 4
+print(parte_entera)
 
 
 
@@ -132,7 +153,8 @@ pi = 3.1416
 
 # In[1]:
 
-
+resto = 27 % 4
+print(resto)
 
 
 
@@ -140,7 +162,8 @@ pi = 3.1416
 
 # In[2]:
 
-
+resultado = (3 * 4) + 3
+print(resultado)
 
 
 
@@ -148,15 +171,17 @@ pi = 3.1416
 
 # In[3]:
 
+nombre = "kobac"
+apellido = "Faiffer"
 
-
-
+resultado = nombre + " "+ apellido
+print(resultado)
 
 # 20) Evaluar si "2" es igual a 2. ¿Por qué ocurre eso?
 
 # In[4]:
 
-
+print("2" == 2)
 
 
 
@@ -164,7 +189,7 @@ pi = 3.1416
 
 # In[11]:
 
-
+print(int("2") == 2)
 
 
 
@@ -172,7 +197,7 @@ pi = 3.1416
 
 # In[12]:
 
-
+# Da error porque Python espera que los números decimales usen punto (.) y no coma (,).
 
 
 
@@ -180,7 +205,10 @@ pi = 3.1416
 
 # In[15]:
 
+numero = 3
+numero -= 1
 
+print(numero)
 
 
 
@@ -188,7 +216,10 @@ pi = 3.1416
 
 # In[29]:
 
+resultado = 1 << 2
+print(resultado)
 
+#respuesta 4 (El operador << es un desplazamiento de bits hacia la izquierda. 1 = 0001 ; 4 = 0100
 
 
 
@@ -196,7 +227,10 @@ pi = 3.1416
 
 # In[23]:
 
+TypeError
 
+# 2 → número entero (int)
+'# '2' → cadena de texto (str)
 
 
 
@@ -205,5 +239,5 @@ pi = 3.1416
 
 # In[30]:
 
-
+resultado = str(5) +'3'
 

@@ -7,7 +7,13 @@
 
 # In[4]:
 
-
+a = 8
+if (a < 8):
+    print('La varriable es mayor a cero ')
+elif (a > 0):
+    print('La variable es mayor a cero')
+else:
+    print('lavariable es igual a cero')
 
 
 
@@ -15,7 +21,14 @@
 
 # In[5]:
 
+a = 4
+b = 'Hola'
+  
+if ( type(a) == type(b)):
+    print('Las Variables son del mismo tipo de dato')
 
+else:
+    print('Las variables son de datos distintos')
 
 
 
@@ -23,7 +36,11 @@
 
 # In[7]:
 
-
+for i in range(1, 21):
+    if i % 2 == 0:
+        print('El numero', str(i), 'es par')
+    else:
+        print('El numero', str(i), 'es impar')
 
 
 
@@ -31,7 +48,8 @@
 
 # In[9]:
 
-
+for i in range(0,6):
+     print('Valor:', str(i), 'Elevado a la 3° potencia', str(i ** 3))
 
 
 
