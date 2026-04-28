@@ -57,14 +57,27 @@ for i in range(0,6):
 
 # In[10]:
 
+numero = 5
 
+for i in range(numero):
+    print("Ciclo", i + 1)
 
 
 
 # 6) Utilizar un ciclo while para realizar el factoreo de un número guardado en una variable, sólo si la variable contiene un número entero mayor a 0
 
 # In[33]:
+numero = 5 
 
+if type(numero) == int and numero > 0:
+    factorial = 1
+    while numero > 0:
+        factorial *= numero
+        numero -= 1
+
+        print(factorial)
+    else:
+        print("Debe ingresar un numero entero mayor a 0")
 
 
 
@@ -73,14 +86,28 @@ for i in range(0,6):
 
 # In[38]:
 
+contador = 1
 
+while contador <= 3:
+    print("vuelta del While", contador)
+
+    for i in range(1, 4):
+       print(" Ciclo for:", i)
+    contador += 1
 
 
 
 # 8) Crear un ciclo while dentro de un ciclo for
 
 # In[3]:
+for i in range(1, 4):
+    print("Vuelta del for:", i)
+    contador = 1
 
+    while contador <= 3:
+        print (" Ciclo While:", contador)
+               
+        contador += 1
 
 
 
