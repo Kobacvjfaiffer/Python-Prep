@@ -7,7 +7,12 @@
 
 # In[1]:
 
-
+lista = []
+n = -15
+while n <= -1:
+    lista.append(n)
+    n += 1
+    print(lista)
 
 
 
@@ -15,7 +20,11 @@
 
 # In[3]:
 
-
+i = 0
+while i < len(lista):
+    if lista[i] % 2 == 0:
+        print(lista[i])
+    i += 1 
 
 
 
@@ -23,21 +32,25 @@
 
 # In[4]:
 
-
+for numero in lista:
+    if numero % 2 == 0:
+        print(numero)
 
 
 
 # 4) Utilizar el iterable para recorrer sólo los primeros 3 elementos
 
 # In[7]:
-
+for numero in lista[:3]:
+    print(numero)
 
 
 
 # 5) Utilizar la función **enumerate** para obtener dentro del iterable, tambien el índice al que corresponde el elemento
 
 # In[9]:
-
+for indice, numero in enumerate(lista):
+    print(indice, numero)
 
 
 
@@ -45,7 +58,13 @@
 
 # In[10]:
 
+lista = [1,2,5,7,10,13,14,15,17,28]
 
+for n in range(1,21):
+    if n not in lista:
+        lista.append(n)
+    lista.sort()
+    print(lista)    
 
 
 
@@ -63,7 +82,10 @@ n = 1
 # Crear una lista con los primeros treinta números de la sucesión.<br>
 
 # In[23]:
-
+fibonacci = [0,1]
+while len(fibonacci) < 30:
+    fibonacci.append(fibonacci[-1]+fibonacci[-2])
+    print(fibonacci)
 
 
 
@@ -72,7 +94,7 @@ n = 1
 
 # In[24]:
 
-
+print(sum(fibonacci))
 
 
 # 9) La proporción aurea se expresa con una proporción matemática que nace el número irracional Phi= 1,618… que los griegos llamaron número áureo. El cuál se puede aproximar con la sucesión de Fibonacci. Con la lista del ejercicio anterior, imprimir el cociente de los últimos 5 pares de dos números contiguos:<br>
@@ -86,7 +108,8 @@ n = 1
 
 # In[38]:
 
-
+for i in range(len(fibonacci)-1, len(fibonacci)-6, -1):
+    print(fibonacci[i -1] / fibonacci[i])
 
 
 # 10) A partir de la variable cadena ya dada, mostrar en qué posiciones aparece la letra "n"<br>
@@ -94,6 +117,10 @@ n = 1
 
 # In[39]:
 
+cadena = "Hola Mundo, esto es una practica de lenguaje python"
+for i, letra in enumerate(cadena):
+    if letra == 'n':
+        print(i)
 
 
 
@@ -102,28 +129,38 @@ n = 1
 
 # In[40]:
 
-
+diccionario = {"nombe":"Kobac","edad":30, "pais":"Peru"}
+for clave in diccionario:
+    print(clave)
 
 
 
 # 12) Convertir en una lista la variable "cadena" del punto 10 y luego recorrerla con un iterador 
 
 # In[41]:
-
+diccionario = {"nombe":"Kobac","edad":30, "pais":"Peru"}
+for clave in diccionario:
+    print(clave)
 
 
 
 
 # In[45]:
 
-
+lista_cadena = list(cadena)
+for letra in lista_cadena:
+    print(letra)
 
 
 
 # 13) Crear dos listas y unirlas en una tupla utilizando la función zip
 
 # In[48]:
+lista1 = [1, 2, 3]
+lista2 = ["a", "b", "c"]
 
+tupla_zip = tuple(zip(lista1, lista2))
+print(tupla_zip) 
 
 
 
@@ -133,7 +170,12 @@ n = 1
 
 # In[49]:
 
-
+lis = [18, 21, 29, 32, 35, 42, 56, 60, 63, 71, 84, 90, 91, 100 ]
+nueva = []
+for num in lis:
+    if num % 7 == 0:
+        nueva.append(num)
+        print(nueva)
 
 
 
@@ -142,8 +184,16 @@ n = 1
 
 # In[56]:
 
+lis = [[1, 2, 3, 4],"rojo","verde",[True, False, False],["uno","dos", "tres"]]
+       
+contador = 0
 
-
+for elemento in lis:
+        if type(elemento) == list:
+           contador += len(elemento)
+        else:
+           contador += 1
+print(contador)
 
 # In[51]:
 
@@ -161,5 +211,11 @@ n = 1
 
 # In[58]:
 
-
+nueva_lista = []
+for elemento in lis:
+    if type(elemento) == list:
+        nueva_lista.append(elemento)
+    else:
+        nueva_lista.append([elemento])
+print(nueva_lista)
 

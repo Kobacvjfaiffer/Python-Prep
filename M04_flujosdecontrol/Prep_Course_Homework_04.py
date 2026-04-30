@@ -116,13 +116,34 @@ for i in range(1, 4):
 
 # In[54]:
 
+for numero in range (0, 31):
+    es_primo = True
+    for i in range(2, numero):
+        if numero % i == 0:
+            es_primo = False
 
+        break
+    
+    if es_primo:
+        print(numero)
 
 
 # 10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
 
 # In[55]:
+Tope_rango = 30
+n = 0
+primo = True
+while(n < Tope_rango):
+    for div in range(2, n):
+        if (n % div == 0):
+            primo = False
+    if (primo):
+        print(n)
+    else:
+        primo = True
 
+    n += 1 
 
 
 
@@ -131,10 +152,45 @@ for i in range(1, 4):
 
 # In[56]:
 
+# CON BREAK
+ciclos_con_break = 0
+n = 2
 
+while n < tope_rango:
+    primo = True
+
+    for div in range(2, n):
+        ciclos_con_break += 1
+
+        if n % div == 0:
+            primo = False
+            break
+
+    n += 1
+
+print("Cantidad de ciclos con break:", ciclos_con_break)
 
 
 # In[57]:
+
+tope_rango = 30
+
+# SIN BREAK
+ciclos_sin_break = 0
+n = 2
+
+while n < tope_rango:
+    primo = True
+
+    for div in range(2, n):
+        ciclos_sin_break += 1
+
+        if n % div == 0:
+            primo = False
+
+    n += 1
+
+print("Cantidad de ciclos sin break:", ciclos_sin_break)
 
 
 
@@ -143,7 +199,13 @@ for i in range(1, 4):
 
 # In[62]:
 
-
+n = 100
+while n <= 300:
+    if n % 12 != 0:
+        n += 1
+        continue
+    print(n)
+    n += 1
 
 
 
@@ -151,6 +213,29 @@ for i in range(1, 4):
 
 # In[73]:
 
+numero = int(input("Ingrese un numero: "))
+while True:
+    if numero > 1:
+        primo = True
+
+        for div in range(2, numero):
+            if numero % div == 0:
+                primo = False
+                break
+
+        if primo:
+            print(numero, "es primo")
+        else:
+            print(numero, "no es primo")
+    else:
+        print("Debe ingresar un numero mayor a 1")
+
+    opcion = input("¿Desea buscar el siguiente numero (s/n):")
+    
+    if opcion.lower() == "s":
+            numero += 1
+    else:
+        break
 
 
 
@@ -158,5 +243,11 @@ for i in range(1, 4):
 
 # In[75]:
 
+numero = 100
 
+while numero <= 300:
+    if numero % 3 == 0 and numero % 6 == 0:
+        print(numero)
+        break
+    numero +=1
 

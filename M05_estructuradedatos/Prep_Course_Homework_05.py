@@ -7,21 +7,22 @@
 
 # In[3]:
 
-
+ciudades = ["Lima","Madrid","Tokio","Roma","Paris","Bogota"]
+print(ciudades)
 
 
 # 2) Imprimir por pantalla el segundo elemento de la lista
 
 # In[4]:
 
-
+print(ciudades[1])
 
 
 # 3) Imprimir por pantalla del segundo al cuarto elemento
 
 # In[8]:
 
-
+print(ciudades[1:4])
 
 
 
@@ -29,7 +30,7 @@
 
 # In[12]:
 
-
+print(type(ciudades))
 
 
 
@@ -38,6 +39,7 @@
 # In[14]:
 
 
+print(ciudades[2:])
 
 
 
@@ -45,7 +47,7 @@
 
 # In[15]:
 
-
+print(ciudades[:4])
 
     
 
@@ -54,7 +56,9 @@
 
 # In[16]:
 
-
+ciudades.append("Lima")
+ciudades.append("Santiago")
+print(ciudades)
 
 
 
@@ -66,7 +70,8 @@
 
 # In[20]:
 
-
+ciudades.insert(3, "Buenos Aires")
+print(ciudades)
 
 
 
@@ -78,7 +83,9 @@
 # 9) Concatenar otra lista a la ya creada
 
 # In[22]:
-
+otras = ("Miami","Toronto")
+ciudades += otras
+print(ciudades)
 
 
 
@@ -86,7 +93,7 @@
 
 # In[23]:
 
-
+print(ciudades.index("Lima"))
 
 
 
@@ -94,7 +101,7 @@
 
 # In[24]:
 
-
+print(ciudades.index(Berlin))
 
 
 
@@ -102,7 +109,8 @@
 
 # In[25]:
 
-
+ciudades.remove("Roma")
+print(ciudades)
 
 
 
@@ -110,7 +118,7 @@
 
 # In[27]:
 
-
+ciudades.remove("Berlin")
 
 
 
@@ -118,7 +126,9 @@
 
 # In[28]:
 
-
+ultima = ciudades.pop()
+print(ultima)
+print(ciudades)
 
 
 
@@ -126,21 +136,22 @@
 
 # In[29]:
 
-
+print(ciudades * 4)
 
 
 # 16) Crear una tupla que contenga los números enteros del 1 al 20
 
 # In[32]:
 
-
+tupla = tuple(range(1, 21))
+print(tupla)
 
 
 # 17) Imprimir desde el índice 10 al 15 de la tupla
 
 # In[35]:
 
-
+print(tupla[10:16])
 
 
 # 18) Evaluar si los números 20 y 30 están dentro de la tupla
@@ -148,14 +159,23 @@
 # In[41]:
 
 
-
+print(20 in tupla)
+print(30 in tupla)
 
 
 # 19) Con la lista creada en el punto 1, validar la existencia del elemento 'París' y si no existe, agregarlo. Utilizar una variable e informar lo sucedido.
 
 # In[48]:
 
+mensaje = " "
+if "Paris" in ciudades:
+    mensaje = "Paris ya existe"
 
+else:
+    ciudades.append("Paris")
+    mensaje = "Paris fue agregada"
+
+print(mensaje)
 
 
 
@@ -163,7 +183,8 @@
 
 # In[51]:
 
-
+print(tupla.count(10))
+print(ciudades.count("Lima"))
 
 
 
@@ -171,7 +192,8 @@
 
 # In[52]:
 
-
+lista_tupla = list(tupla)
+print (lista_tupla)
 
 
 
@@ -180,14 +202,18 @@
 # In[55]:
 
 
-
+a, b, c = tupla[:3]
+print(a, b, c)
 
 
 # 23) Crear un diccionario utilizando la lista crada en el punto 1, asignandole la clave "ciudad". Agregar tambien otras claves, como puede ser "Pais" y "Continente".
 
 # In[57]:
 
-
+diccionario = {
+    "ciudad": ciudades, "Paris":"Varios", "Continente":"Varios"
+}
+print(diccionario)
 
 
 
@@ -196,6 +222,7 @@
 
 # In[59]:
 
+print(diccionario.keys())
 
 
 
@@ -203,6 +230,6 @@
 
 # In[61]:
 
-
+print(diccionario["ciudad"])
 
 
